@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fragmentactivitydemo.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment One"
+        android:onClick="selectFrag"
+        android:id="@+id/button1"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:text="Fragment Two"
+        android:onClick="selectFrag"
+        android:id="@+id/button2"
+        />
+
+    <fragment
+        android:id="@+id/fragment_place"
+        android:name="com.example.fragmentactivitydemo.FragmentOne"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        tools:layout="@layout/fragment_one"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"></fragment>
+
+</RelativeLayout>
